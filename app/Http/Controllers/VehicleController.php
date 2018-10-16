@@ -13,7 +13,7 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        return 'Hello from Index controller';
+        return "Hello from Index controller";
     }
 
     /**
