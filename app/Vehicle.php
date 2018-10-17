@@ -9,4 +9,8 @@ class Vehicle extends Model
     public function category(){
         return $this->belongsTo('App\Category');
     }
+
+    public function producer(){
+        return $this->belongsTo('App\Producer');
+    }
 }
