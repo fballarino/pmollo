@@ -13,4 +13,8 @@ class Vehicle extends Model
     public function producer(){
         return $this->belongsTo('App\Producer');
     }
+
+    public static function displayByCategory(Category $category){
+        return Vehicle::where('category_id', $category->id)->paginate(20);
+    }
 }
