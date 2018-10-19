@@ -12,6 +12,18 @@
         <td>{{ $vehicle->description }}</td>
     </tr>
     <tr>
+        <td>Lunghezza:</td>
+        <td>{{ $vehicle->length }}cm</td>
+    </tr>
+    <tr>
+        <td>Larghezza:</td>
+        <td>{{ $vehicle->width }}cm</td>
+    </tr>
+    <tr>
+        <td>Altezza:</td>
+        <td>{{ $vehicle->height }}cm</td>
+    </tr>
+    <tr>
         <td>Massa:</td>
         <td>{{ $vehicle->mass }}kg</td>
     </tr>
