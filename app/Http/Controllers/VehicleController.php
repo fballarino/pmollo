@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Jobs\TestJob;
+use App\Jobs\TestJobTwo;
 use App\Vehicle;
 use Illuminate\Http\Request;
 
@@ -23,7 +25,8 @@ class VehicleController extends Controller
 
     public function create()
     {
-        //
+        $this->dispatch(new TestJob());
+        $this->dispatch(new TestJobTwo());
     }
 
 

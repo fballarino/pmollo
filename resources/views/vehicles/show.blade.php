@@ -1,3 +1,4 @@
+<p>Categoria: {{ $vehicle->category->name }}</p>
 <table>
     <tr>
         <td>Veicolo:</td>

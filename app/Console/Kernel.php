@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\TestCmd',
+        'App\Console\Commands\TestCmdTwo',
     ];
 
     /**
@@ -26,9 +27,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function () {
-            DB::table('statuses')->update(['updated_at' => Carbon::now()]);
-        })->everyFiveMinutes();
+        $schedule->command('testcmd:test')->everyMinute();
+        $schedule->command('testcmdtwo:test')->everyMinute();
     }
 
     /**
