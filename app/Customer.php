@@ -10,6 +10,6 @@ class Customer extends Model
     use SoftDeletes;
 
     public function destinations() {
-        return $this->hasMany(Destination::class)->withTimestamps();
+        return $this->belongsToMany(Destination::class)->withTimestamps();
     }
 }

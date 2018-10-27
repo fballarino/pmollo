@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/vehicles/{category}/category','VehicleController@displayByCategory' )->name('vehicles.list.by.category');
 Route::resource('/vehicles', 'VehicleController');
+
+Route::resource('/customers', 'CustomerController');
