@@ -14,6 +14,10 @@ class Vehicle extends Model
         return $this->belongsTo('App\Producer');
     }
 
+    public function vehicleEvents(){
+        return $this->hasMany('App\EventVehicle')->orderBy('event_from', 'desc');
+    }
+
     public static function displayByCategory(Category $category){
         return Vehicle::where('category_id', $category->id)->paginate(20);
     }

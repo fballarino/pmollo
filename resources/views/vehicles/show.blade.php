@@ -34,3 +34,22 @@
     </tr>
 </table>
 
+<table border="1">
+    <tr>
+        <th>Stato</th>
+        <th>Dal</th>
+        <th>Al</th>
+        <th>Note</th>
+        <th>Utente</th>
+    </tr>
+    @foreach($vehicle->vehicleEvents as $event)
+        <tr>
+            <td>{{ $event->status->name }}</td>
+            <td>{{ $event->event_from }}</td>
+            <td>{{ $event->event_to }}</td>
+            <td>{{ $event->note }}</td>
+            <td>{{ $event->user->name }}</td>
+        </tr>
+    @endforeach
+</table>
+

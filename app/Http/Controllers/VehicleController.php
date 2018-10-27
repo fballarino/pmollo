@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\EventVehicle;
 use App\Jobs\TestJob;
 use App\Jobs\TestJobTwo;
 use App\Vehicle;
@@ -40,6 +41,8 @@ class VehicleController extends Controller
     {
         $vehicle = Vehicle::find($id);
         return view('vehicles.show', compact('vehicle'));
+
+
     }
 
 
